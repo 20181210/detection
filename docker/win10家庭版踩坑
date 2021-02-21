@@ -1,1 +1,20 @@
 
+1、https://www.ithome.com/html/win10/374942.htm
+Hypver-V
+安装
+脚本
+pushd "%~dp0"
+dir /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum >hyper-v.txt
+for /f %%i in ('findstr /i . hyper-v.txt 2^>nul') do dism /online /norestart /add-package:"%SystemRoot%\servicing\Packages\%%i"
+del hyper-v.txt
+Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL
+
+2、https://docs.microsoft.com/en-us/windows/wsl/install-win10
+WSL2安装 
+ 
+3、	正常安装
+4、	Docker常见命令
+Docker run –gpus all
+https://yq.aliyun.com/live/246392
+
+
